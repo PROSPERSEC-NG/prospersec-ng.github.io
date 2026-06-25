@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PROSPERSEC - Cybersecurity learning and professional development initiative">
+    <title>PROSPERSEC | Securing Today. Protecting Tomorrow.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #ecf0f1;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1c2841 0%, #0d1b2a 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid #00d4ff;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+            backdrop-filter: blur(10px);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+            color: #1abc9c;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #bdc3c7;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.7rem;
+            color: #bdc3c7;
+        }
+        
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .focus-card {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .focus-card:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .focus-card h4 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .resource-card {
+            background: rgba(26, 188, 156, 0.1);
+            border: 1px solid #1abc9c;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            background: rgba(26, 188, 156, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(26, 188, 156, 0.2);
+        }
+        
+        .resource-card h4 {
+            color: #1abc9c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .cert-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #95a5a6;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .connect {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #00d4ff, #1abc9c);
+            color: #0a0e27;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #34495e;
+            margin-top: 3rem;
+            color: #95a5a6;
+        }
+        
+        .highlight {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PROSPERSEC</h1>
+        <p class="tagline">Securing Today. Protecting Tomorrow.</p>
+    </header>
+    
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2>About PROSPERSEC</h2>
+            <p>
+                PROSPERSEC is a <span class="highlight">cybersecurity learning and professional development initiative</span> 
+                founded by <span class="highlight">Prosper Chidiebere Chukwuemeka</span>.
+            </p>
+            <p>
+                This platform serves as a comprehensive resource for cybersecurity knowledge, certification preparation, 
+                hands-on labs, and industry best practices. Whether you're beginning your cybersecurity journey or advancing 
+                your expertise, PROSPERSEC provides structured learning materials and practical experience.
+            </p>
+        </section>
+        
+        <!-- Focus Areas Section -->
+        <section>
+            <h2>Core Focus Areas</h2>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <h4>🛡️ Governance, Risk & Compliance (GRC)</h4>
+                    <p>Understanding frameworks, policies, and compliance requirements in cybersecurity.</p>
+                </div>
+                <div class="focus-card">
+                    <h4>🏭 ICS Security</h4>
+                    <p>Industrial Control Systems security and operational technology protection.</p>
+                </div>
+                <div class="focus-card">
+                    <h4>🌐 Networking</h4>
+                    <p>Network fundamentals, protocols, architecture, and secure network design.</p>
+                </div>
+                <div class="focus-card">
+                    <h4>🔍 Security Operations</h4>
+                    <p>SOC operations, incident response, threat detection, and analysis.</p>
+                </div>
+                <div class="focus-card">
+                    <h4>⚠️ Cyber Risk Management</h4>
+                    <p>Risk assessment, mitigation strategies, and business continuity.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section>
+            <h2>Planned Certifications</h2>
+            <p>The following certifications are part of our structured learning path:</p>
+            <div class="cert-list">
+                <div class="cert-item">
+                    <strong>CompTIA Network+</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #95a5a6;">Foundation networking</p>
+                </div>
+                <div class="cert-item">
+                    <strong>CompTIA Security+</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #95a5a6;">Security fundamentals</p>
+                </div>
+                <div class="cert-item">
+                    <strong>ISC² Certified in Cybersecurity (CC)</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #95a5a6;">Cybersecurity essentials</p>
+                </div>
+                <div class="cert-item">
+                    <strong>Certified Ethical Hacker (CEH)</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #95a5a6;">Offensive security</p>
+                </div>
+                <div class="cert-item">
+                    <strong>CISSP</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #95a5a6;">Advanced security professional</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Learning Resources Section -->
+        <section>
+            <h2>Learning Platforms</h2>
+            <p>We leverage industry-leading platforms for comprehensive learning:</p>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>📚 Professor Messer</h4>
+                    <p>CompTIA certification exam preparation videos and study materials.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>🏢 Cisco Skills for All</h4>
+                    <p>Networking fundamentals and hands-on Cisco training.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>🔐 ISC²</h4>
+                    <p>Official resources for CC and CISSP certification paths.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>🎯 TryHackMe</h4>
+                    <p>Interactive cybersecurity labs and guided learning challenges.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>⚔️ Hack The Box</h4>
+                    <p>Advanced penetration testing and real-world security challenges.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Connect Section -->
+        <section>
+            <h2>Connect With Us</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Follow our journey in cybersecurity learning and professional development.
+            </p>
+            <div class="connect">
+                <a href="https://linkedin.com/in/prosper-chidiebere-chukwuemeka" class="social-link" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/PROSPERSEC-NG" class="social-link" target="_blank">
+                    GitHub
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 PROSPERSEC | Securing Today. Protecting Tomorrow.</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">All learning materials and resources are for educational purposes.</p>
+    </footer>
+</body>
+</html>
